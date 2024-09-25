@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <style>
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      align-content:center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Main Container */
+    .main-div {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      width: 100%;
+      margin:0 auto;
+    }
+
+    /* Screen Styling */
+    .screen-main {
+      text-align: right;
+      margin-bottom: 15px;
+    }
+
+    .display {
+      background-color: #000;
+      color: #00ff00;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 2.2em;
+      min-height: 60px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      overflow:hidden;
+    }
+
+    /* Keypad Styling */
+    .main-key-div {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .key {
+      background-color: #444;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin:5px;
+    }
+
+    .key:hover {
+      background-color: #555;
+    }
+
+    /* Clear and Equal Keys Differentiation */
+    .key:nth-child(16), /* "C" button */
+    .key:nth-child(15) { /* "=" button */
+      background-color: #ff6f61;
+      color: #fff;
+    }
+
+    .key:nth-child(16):hover,
+    .key:nth-child(15):hover {
+      background-color: #e65c50;
+    }
+    
+    /* Operators Styling */
+    .key:nth-child(1),
+    .key:nth-child(5),
+    .key:nth-child(9),
+    .key:nth-child(13) {
+      background-color: #fe9f21;
+    }
+
+    .key:nth-child(1):hover,
+    .key:nth-child(5):hover,
+    .key:nth-child(9):hover,
+    .key:nth-child(13):hover {
+      background-color: #e8901e;
+    }
+
+  </style>
+</head>
+<body>
+  <h2 style="text-align: center;">Just Calculate</h2>
+    <div class="main-div">
+     <div class="screen-main">
+      <div id="display" class="display"></div>
+     </div>
+     <div class="main-key-div">
+       <div class="key-div">
+         <div class="key" id="keys">+</div>
+         <div class="key" id="keys">1</div>
+         <div class="key" id="keys">2</div>
+         <div class="key" id="keys">3</div>
+       </div>
+       <div class="key-div">
+         <div class="key" id="keys">-</div>
+         <div class="key" id="keys">4</div>
+         <div class="key" id="keys">5</div>
+         <div class="key" id="keys">6</div>
+       </div>
+       <div class="key-div">
+         <div class="key" id="keys">×</div>
+         <div class="key" id="keys">7</div>
+         <div class="key" id="keys">8</div>
+         <div class="key" id="keys">9</div>
+       </div>
+       <div class="key-div">
+         <div class="key" id="keys">÷</div>
+         <div class="key" id="keys">0</div>
+         <div class="key" id="keys">=</div>
+         <div class="key" id="keys">C</div>
+       </div>
+     </div>
+    </div>
+    <script src="./Fail.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
